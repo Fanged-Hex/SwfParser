@@ -36,22 +36,51 @@
 	<unistd.h>
 	<unixio.h>
 
-1419505780 source:/home/wamilou/Dropbox/CBProjects/SWFParser/main.cpp
+1425496964 source:/home/wamilou/Dropbox/CBProjects/SWFParser/main.cpp
 	<iostream>
 	"swfparser/SwfFile.h"
 
-1425212660 /home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.h
+1425656515 /home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.h
 	<sys/stat.h>
 	<iostream>
 	<string>
 	<fstream>
 	<ios>
+	<sstream>
 	<stdio.h>
 	<string.h>
 	<zlib.h>
 	<fcntl.h>
 	<io.h>
 
-1425214154 source:/home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.cpp
+1425719633 source:/home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.cpp
 	"SwfFile.h"
+
+1425496964 source:/home/insight/Dropbox/CBProjects/SWFParser/main.cpp
+	<iostream>
+	"swfparser/SwfFile.h"
+
+1425883606 /home/insight/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.h
+	<sys/stat.h>
+	<iostream>
+	<string>
+	<fstream>
+	<ios>
+	<sstream>
+	<stdio.h>
+	<string.h>
+	<zlib.h>
+	<fcntl.h>
+	<io.h>
+	"BitReader.h"
+
+1425883820 source:/home/insight/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.cpp
+	"SwfFile.h"
+
+1425884931 /home/insight/Dropbox/CBProjects/SWFParser/swfparser/BitReader.h
+	<iostream>
+	<sstream>
+
+1425884953 source:/home/insight/Dropbox/CBProjects/SWFParser/swfparser/BitReader.cpp
+	"BitReader.h"
 

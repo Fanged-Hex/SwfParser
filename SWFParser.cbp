@@ -39,6 +39,8 @@
 			<Add directory="Z:/zlib-1.2.8/build" />
 		</Linker>
 		<Unit filename="main.cpp" />
+		<Unit filename="swfparser/BitReader.cpp" />
+		<Unit filename="swfparser/BitReader.h" />
 		<Unit filename="swfparser/SwfFile.cpp" />
 		<Unit filename="swfparser/SwfFile.h" />
 		<Extensions>

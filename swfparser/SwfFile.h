@@ -7,6 +7,7 @@
 #include <string>
 #include <fstream>
 #include <ios>
+#include <sstream>
 using namespace std;
 
 #include <stdio.h>
@@ -19,6 +20,8 @@ using namespace std;
 #else
 #  define SET_BINARY_MODE(file)
 #endif*/
+
+#include "BitReader.h"
 
 enum SwfCompression : unsigned char { NONE = 0x46, ZLIB = 0x43, LZMA = 0x5A };
 
