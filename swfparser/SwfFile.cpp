@@ -102,32 +102,26 @@ void SwfFile::parseHeader()
     // On libère la mémoire utilisée pour la décompression
     inflateEnd(&strm);
 
-    BitReader reader( (char*)out );
+    BitReader reader((char*)out, m_size);
 
     unsigned char rectSize = reader.readBits(5);
     cout << "Frame RECT Size " << (int)rectSize << endl;
 
-    /*uint16_t posX;
-    fileData.read( (char*)&posX, 2 );
+    uint16_t posX = reader.readUInt16();
     cout << "\tPos X " << posX << endl;
 
-    uint16_t posY;
-    fileData.read( (char*)&posY, 2 );
+    uint16_t posY = reader.readUInt16();
     cout << "\tPos Y " << posY << endl;
 
-    uint16_t width;
-    fileData.read( (char*)&width, 2 );
+    uint16_t width = reader.readUInt16();
     cout << "\tWidth " << width << endl;
 
-    uint16_t height;
-    fileData.read( (char*)&height, 2 );
+    uint16_t height = reader.readUInt16();
     cout << "\tHeight " << height << endl;
 
-    uint16_t frameRate;
-    fileData.read((char*)&frameRate, sizeof(frameRate));
+    uint16_t frameRate = reader.readUInt16();
     cout << "Frame rate " << frameRate << endl;
 
-    uint16_t frameCount;
-    fileData.read((char*)&frameCount, sizeof(frameCount));
-    cout << "Frame count " << frameCount << endl;*/
+    uint16_t frameCount = reader.readUInt16();
+    cout << "Frame count " << frameCount << endl;
 }

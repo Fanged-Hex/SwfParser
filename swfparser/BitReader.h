@@ -8,9 +8,9 @@ using namespace std;
 class BitReader
 {
 public:
-    BitReader(char *data);
+    BitReader(char *data, int taille);
 
-    unsigned char readBits(uint32_t aLire);
+    unsigned char readBits(int aLire);
     unsigned char readUChar(void);
     uint16_t readUInt16(void);
 private:

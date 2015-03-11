@@ -40,7 +40,7 @@
 	<iostream>
 	"swfparser/SwfFile.h"
 
-1425656515 /home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.h
+1425883606 /home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.h
 	<sys/stat.h>
 	<iostream>
 	<string>
@@ -52,8 +52,9 @@
 	<zlib.h>
 	<fcntl.h>
 	<io.h>
+	"BitReader.h"
 
-1425719633 source:/home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.cpp
+1426078805 source:/home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/SwfFile.cpp
 	"SwfFile.h"
 
 1425496964 source:/home/insight/Dropbox/CBProjects/SWFParser/main.cpp
@@ -82,5 +83,12 @@
 	<sstream>
 
 1425884953 source:/home/insight/Dropbox/CBProjects/SWFParser/swfparser/BitReader.cpp
+	"BitReader.h"
+
+1426078348 /home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/BitReader.h
+	<iostream>
+	<sstream>
+
+1426078714 source:/home/wamilou/Dropbox/CBProjects/SWFParser/swfparser/BitReader.cpp
 	"BitReader.h"
 

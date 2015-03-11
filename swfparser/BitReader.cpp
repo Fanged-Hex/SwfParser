@@ -1,21 +1,20 @@
 #include "BitReader.h"
 
-BitReader::BitReader(char *data)
+BitReader::BitReader(char *data, int taille)
 {
-    ss << data; // On ajoute les données dans le stringstream
+    ss.write(data, taille);
 
-    ss >> currentByte;
+    currentByte = data[0];
     availableBits = 8;
 }
 
-unsigned char BitReader::readBits(uint32_t aLire)
+unsigned char BitReader::readBits(int aLire)
 {
     unsigned char retour = 0;
 
-    for(int i = 0; i < aLire; i++)
+    for(int i = aLire; i > 0; i--)
     {
-        retour = retour | readBit();
-        retour = retour << 1;
+        retour = retour | ( readBit() << (i-1) );
     }
 
     return retour;
@@ -36,10 +35,11 @@ unsigned char BitReader::readUChar()
 uint16_t BitReader::readUInt16()
 {
     uint16_t retour = 0;
+    int aLire = 16;
 
-    for(int i = 0; i < sizeof(retour)*8; i++)
+    for(int i = aLire; i > 0; i--)
     {
-        retour = (retour | readBit()) << 1;
+        retour = retour | ( readBit() << (i-1) );
     }
 
     return retour;
@@ -48,7 +48,7 @@ uint16_t BitReader::readUInt16()
 unsigned char BitReader::readBit()
 {
     if(availableBits <= 0) {
-        ss >> currentByte;
+        ss.read((char*)&currentByte, 1);
         availableBits = 8;
     }
 
